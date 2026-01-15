@@ -30,7 +30,7 @@ body {
   border-radius: 50px;
   flex: 0.5;
 
-  transition: flex 0.8s cubic-bezier(0.72, 0.03, 0.09, 1.02);
+  transition: flex 0.8s cubic-bezier(0.72, 0.03, 0.09, 1.02), box-shadow 0.3s;
   overflow: hidden;
   position: relative;
 }
@@ -64,8 +64,16 @@ img {
   .container {
     width: 95vw;
   }
+
   .card:nth-child(4),
   .card:nth-child(5) {
     display: none;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .card.hover:hover {
+    box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
   }
 }

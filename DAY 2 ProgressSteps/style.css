@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+  background-color: aliceblue;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.step-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 30vw;
+  height: 50px;
+}
+
+.step {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: white;
+  border-radius: 50%;
+  border: 3px solid #d0d0d0;
+  width: 25px;
+  height: 25px;
+
+  transition: border 0.3s;
+}
+
+.step.active {
+  border: 3px solid rgb(96, 96, 226);
+}
+
+.step p {
+  color: #616161;
+}
+
+.line {
+  height: 3px;
+  flex: 1;
+  background-color: #d0d0d0;
+  transition: background-color 0.3s;
+}
+
+.line.active {
+  background-color: rgb(96, 96, 226);
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.prev {
+  border: none;
+  border-radius: 10px;
+  width: 100px;
+  height: 30px;
+  color: black;
+}
+
+.next {
+  border: none;
+  border-radius: 10px;
+  width: 100px;
+  height: 30px;
+  color: white;
+  background-color: rgb(96, 96, 226);
+}
+
+@media (hover:hover) {
+  .prev:hover {
+    background-color: rgb(165, 165, 165);
+    color: white;
+    cursor: pointer;
+  }
+
+  .next:hover {
+    background-color: rgb(16, 16, 140);
+    cursor: pointer;
+  }
+}
