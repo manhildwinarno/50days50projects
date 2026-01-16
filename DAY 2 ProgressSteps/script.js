@@ -10,7 +10,8 @@ next.addEventListener("click", () => {
   if (currentActive > steps.length) {
     currentActive = steps.length;
   }
-  update();
+  updateStep();
+  updateLine();
 });
 
 prev.addEventListener("click", () => {
@@ -18,14 +19,14 @@ prev.addEventListener("click", () => {
   if (currentActive < 1) {
     currentActive = 1;
   }
-  update();
+  updateStep();
+  updateLine();
 });
 
-function update() {
+function updateStep() {
   steps.forEach((step, i) => {
     if (i < currentActive) {
       step.classList.add("active");
-      console.log(i);
     } else {
       step.classList.remove("active");
     }
@@ -37,5 +38,16 @@ function update() {
     next.disabled = true;
   } else {
     prev.disabled = false;
+    next.disabled = false;
   }
+}
+
+function updateLine() {
+  lines.forEach((line, i) => {
+    if (i < currentActive - 1) {
+      line.classList.add("active");
+    } else {
+      line.classList.remove("active");
+    }
+  });
 }
