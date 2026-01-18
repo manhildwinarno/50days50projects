@@ -19,9 +19,9 @@ body {
 
 .menu {
   position: fixed;
-  top: -100px; 
+  top: -100px;
   left: -100px;
-  
+
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -30,7 +30,7 @@ body {
 
   transition: transform 0.5s ease-in-out;
   transform: rotate(0deg);
-  transform-origin: 50% 50%; 
+  transform-origin: 50% 50%;
 }
 
 .hamburger {
@@ -49,7 +49,6 @@ body {
 
 .main-container.active .menu {
   position: absolute;
-  /* HAPUS transform-origin (sudah mewarisi dari atas) */
   transform: rotate(-90deg);
 }
 
@@ -67,9 +66,10 @@ ul {
 }
 
 ul li {
-  margin-bottom: 25px; 
-  color: white; 
-  
+  margin-bottom: 25px;
+  color: white;
+  cursor: pointer;
+
   transform: translateX(0);
   transition: transform 0.7s ease-in-out;
 }
@@ -144,5 +144,11 @@ ul li {
 @media (hover: hover) {
   .author a:hover {
     text-decoration: underline;
+  }
+}
+
+@media (max-width: 480px) {
+  .article-container {
+    padding: 85px 50px;
   }
 }
