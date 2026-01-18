@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", Helvetica, sans-serif;
+  background-color: black;
+}
+
+.main-container {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.menu {
+  position: fixed;
+  top: -100px; 
+  left: -100px;
+  
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: rgb(215, 144, 133);
+  z-index: 999;
+
+  transition: transform 0.5s ease-in-out;
+  transform: rotate(0deg);
+  transform-origin: 50% 50%; 
+}
+
+.hamburger {
+  font-size: 25px;
+  text-align: center;
+  transform: translateX(38px) translateY(135px);
+  cursor: pointer;
+}
+
+.close {
+  font-size: 22px;
+  text-align: center;
+  transform: translateX(-50px) translateY(95px);
+  cursor: pointer;
+}
+
+.main-container.active .menu {
+  position: absolute;
+  /* HAPUS transform-origin (sudah mewarisi dari atas) */
+  transform: rotate(-90deg);
+}
+
+.side-nav {
+  color: white;
+  position: fixed;
+  bottom: 90px;
+  left: -170px;
+  font-size: 15px;
+}
+
+ul {
+  list-style-type: none;
+  text-transform: uppercase;
+}
+
+ul li {
+  margin-bottom: 25px; 
+  color: white; 
+  
+  transform: translateX(0);
+  transition: transform 0.7s ease-in-out;
+}
+
+.side-nav i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.main-container.active .side-nav ul li:nth-child(1) {
+  transform: translateX(200px);
+}
+.main-container.active .side-nav ul li:nth-child(2) {
+  transform: translateX(220px);
+}
+.main-container.active .side-nav ul li:nth-child(3) {
+  transform: translateX(240px);
+}
+
+.article-container {
+  background-color: beige;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 90px;
+  transform-origin: 0% 0%;
+  transition: transform 1s;
+}
+
+.main-container.active .article-container {
+  transform: rotate(-20deg);
+  transform-origin: 0% 0%;
+}
+
+.content {
+  max-width: 980px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  line-height: 1.5;
+}
+
+.title {
+  font-weight: 500;
+}
+
+.mountain {
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  width: 100%;
+}
+
+.author {
+  margin-top: -8px;
+}
+
+.author a {
+  text-decoration: none;
+  color: #595959;
+  font-style: italic;
+}
+
+.content p {
+  color: rgb(58, 58, 58);
+}
+
+@media (hover: hover) {
+  .author a:hover {
+    text-decoration: underline;
+  }
+}
