@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.split {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+
+  position: relative;
+  transition: 1s;
+}
+
+.split::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.3;
+}
+
+.split.left {
+  background: url(img/photo-1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+
+  flex: 1;
+}
+
+.split.right {
+  background: url(img/photo-2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: black;
+  height: 100vh;
+  width: 100vw;
+
+  flex: 1;
+}
+
+.title,
+.btn {
+  color: white;
+  z-index: 1;
+}
+
+.title {
+  font-size: 60px;
+  letter-spacing: 5px;
+}
+
+.btn {
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  font-size: 20px;
+  width: 170px;
+  height: 60px;
+  outline: none;
+  border: 3px solid white;
+}
+
+.btn:hover {
+  background-color: white;
+  color: black;
+}
+
+.split.left.hover-left {
+  flex: 3;
+}
+
+.split.right.hover-right {
+  flex: 3;
+}
