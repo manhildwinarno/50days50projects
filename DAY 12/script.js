@@ -1,10 +1,7 @@
-const button = document.querySelector('.button')
-const cards = document.querySelectorAll('.card')
+const buttons = document.querySelectorAll('.circle')
 
-button.addEventListener('click', function() {
-    cards.forEach(card => {
-        card.innerHTML = `
-            <p>Pizza</p>
-        `
-    });    
+buttons.forEach(button => {
+    button.addEventListener('click', function() {
+        button.parentNode.classList.toggle('active')
+    })
 })
