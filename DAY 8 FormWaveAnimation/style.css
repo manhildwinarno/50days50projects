@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  background: linear-gradient(45deg, rgb(103, 193, 191), rgb(76, 84, 138));
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card {
+  background-color: rgb(47, 47, 150);
+  color: white;
+  max-width: 24rem;
+  width: 100%;
+  height: 27rem;
+  padding: 4rem 2.5rem;
+  border-radius: 0.6rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.card-header {
+  text-align: center;
+  transform: translateY(0.6rem);
+}
+
+.title {
+  font-size: 2.5rem;
+}
+
+.input-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.input-field {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  height: 2rem;
+  border-bottom: 2px solid white;
+}
+
+.input-field:focus,
+.input-field:valid {
+  font-size: 1.3rem;
+}
+
+.label {
+  position: absolute;
+  font-size: 1.2rem;
+  cursor: text;
+  top: 0rem;
+}
+
+.label span {
+  display: inline-block;
+  transition: 0.5s;
+}
+
+.input-field:focus + .label span,
+.input-field:valid + .label span {
+  transform: translateY(-20px);
+  color: rgb(199, 199, 199);
+  font-size: 1rem;
+}
+
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(103, 193, 191);
+  font-weight: 600;
+}
+
+.input-submit {
+  height: 2.6rem;
+  outline: none;
+  border: none;
+  border-radius: 0.8rem;
+  font-size: 1.3rem;
+  letter-spacing: 0.2rem;
+  background-color: rgb(255, 255, 255);
+}
+
+.register {
+  margin-bottom: 1rem;
+}
+
+@media (hover: hover) {
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .input-submit:hover {
+    background-color: rgb(137, 137, 137);
+    color: white;
+    cursor: pointer;
+  }
+}
