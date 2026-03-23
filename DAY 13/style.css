@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    gap: 1.3rem;
+    background-color: rgb(29, 13, 73);
+    color: white;
+}
+
+.input {
+    background-color: rgb(238, 143, 19);
+    border-radius: 1.2rem;
+}
